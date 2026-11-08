@@ -1,0 +1,122 @@
+/* Full-screen area that centers the card */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1faf3;
+}
+
+/* White card with rounded corners and a subtle shadow */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #2e9e5b;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #1e7a45;
+  margin-bottom: 20px;
+}
+
+/* Big counter number in the center */
+.count-display {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #2e9e5b;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+/* Status message */
+.message {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  min-height: 1.5rem;
+}
+
+.message-min {
+  color: #c0392b;
+}
+
+.message-running {
+  color: #2e9e5b;
+}
+
+/* Keeps all three buttons in one row */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Common button style */
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 2px solid #2e9e5b;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Increment and Decrement: green buttons */
+.btn-increment,
+.btn-decrement {
+  background-color: #2e9e5b;
+  color: #ffffff;
+}
+
+.btn-increment:hover,
+.btn-decrement:hover {
+  background-color: #1e7a45;
+  border-color: #1e7a45;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(46, 158, 91, 0.35);
+}
+
+/* Reset: white button with green border */
+.btn-reset {
+  background-color: #ffffff;
+  color: #2e9e5b;
+}
+
+.btn-reset:hover {
+  background-color: #e6f6ec;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(46, 158, 91, 0.25);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .count-display {
+    font-size: 4.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
